@@ -1,16 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
-import * as request from "superagent";
+import React, { useState } from "react";
 import { Header, CitySelect, WeatherCard } from "./components/index";
+// import Forecast from "./components/ForecastProps";
 import "./assets/css/reset.css";
 import "./assets/css/style.scss";
 
 const App = () => {
-  const [test, setTest] = useState(false);
-
-  const handleClick = () => {
-    setTest(true);
-    console.log(test);
-  };
+  const [weather, setWeather] = useState([]);
 
   return (
     <div>
